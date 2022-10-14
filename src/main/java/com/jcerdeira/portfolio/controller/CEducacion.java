@@ -24,7 +24,7 @@ import org.springframework.web.bind.annotation.RestController;
 /*Local*/
 /*@CrossOrigin(origins = "http://localhost:4200")*/
 /*Producción*/
-@CrossOrigin(origins = "https://frontend-jcerdeira.web.app")
+@CrossOrigin(origins = "https://portfolio-jcerdeira.web.app")
 
 public class CEducacion {
 
