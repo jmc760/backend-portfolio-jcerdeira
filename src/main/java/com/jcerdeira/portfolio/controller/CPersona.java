@@ -21,10 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/pers")
-/*Local*/
-/*@CrossOrigin(origins = "http://localhost:4200")*/
-/*Producción*/
-@CrossOrigin(origins = "https://portfolio-jcerdeira.web.app")
+@CrossOrigin(origins = {"https://portfolio-jcerdeira.web.app", "http://localhost:4200"})
 
 public class CPersona {
 
@@ -64,7 +61,7 @@ public class CPersona {
             return new ResponseEntity(new Mensaje("Esa persona ya existe."), HttpStatus.BAD_REQUEST);
         }
 
-        Persona persona = new Persona(dtoper.getNombreP(), dtoper.getPuestoP(), dtoper.getUbicacionP());
+        Persona persona = new Persona(dtoper.getNombreP(), dtoper.getPuestoP(), dtoper.getUbicacionP(), dtoper.getDescripcionP(), dtoper.getImgP());
         sPersona.save(persona);
 
         return new ResponseEntity(new Mensaje("Persona agregada."), HttpStatus.OK);
@@ -87,11 +84,12 @@ public class CPersona {
 
         Persona persona = sPersona.getOne(id).get();
         persona.setNombreP(dtoper.getNombreP());
-        persona.setPuestoP((dtoper.getPuestoP()));
-        persona.setUbicacionP((dtoper.getUbicacionP()));
+        persona.setPuestoP(dtoper.getPuestoP());
+        persona.setUbicacionP(dtoper.getUbicacionP());
+        persona.setDescripcionP(dtoper.getDescripcionP());
+        persona.setImgP(dtoper.getImgP());
 
         sPersona.save(persona);
         return new ResponseEntity(new Mensaje("Persona actualizada."), HttpStatus.OK);
-
     }
 }

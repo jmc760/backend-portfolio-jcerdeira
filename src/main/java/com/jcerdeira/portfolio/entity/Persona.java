@@ -14,19 +14,22 @@ public class Persona {
     private String nombreP;
     private String puestoP;
     private String ubicacionP;
-
+    private String descripcionP;
+    private String imgP;
 
     //Constructores
     public Persona() {
     }
 
-    public Persona(String nombreP, String puestoP, String ubicacionP) {
+    public Persona(String nombreP, String puestoP, String ubicacionP, String descripcionP, String imgP) {
         this.nombreP = nombreP;
         this.puestoP = puestoP;
         this.ubicacionP = ubicacionP;
+        this.descripcionP = descripcionP;
+        this.imgP = imgP;
     }
 
-    //Getters and setters
+    //Getters & setters
     public int getId() {
         return id;
     }
@@ -57,6 +60,22 @@ public class Persona {
 
     public void setUbicacionP(String ubicacionP) {
         this.ubicacionP = ubicacionP;
+    }
+
+    public String getDescripcionP() {
+        return descripcionP;
+    }
+
+    public void setDescripcionP(String descripcionP) {
+        this.descripcionP = descripcionP;
+    }
+
+    public String getImgP() {
+        return imgP;
+    }
+
+    public void setImgP(String imgP) {
+        this.imgP = imgP;
     }
 
 }

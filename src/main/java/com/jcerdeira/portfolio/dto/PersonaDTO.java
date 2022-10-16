@@ -10,19 +10,24 @@ public class PersonaDTO {
     private String puestoP;
     @NotBlank
     private String ubicacionP;
+    @NotBlank
+    private String descripcionP;
+    @NotBlank
+    private String imgP;
 
     //Constructores
     public PersonaDTO() {
     }
 
-    public PersonaDTO(String nombreP, String puestoP, String ubicacionP) {
+    public PersonaDTO(String nombreP, String puestoP, String ubicacionP, String descripcionP, String imgP) {
         this.nombreP = nombreP;
         this.puestoP = puestoP;
         this.ubicacionP = ubicacionP;
+        this.descripcionP = descripcionP;
+        this.imgP = imgP;
     }
-    
-    //Getters & Setters
 
+    //Getters & Setters
     public String getNombreP() {
         return nombreP;
     }
@@ -45,6 +50,22 @@ public class PersonaDTO {
 
     public void setUbicacionP(String ubicacionP) {
         this.ubicacionP = ubicacionP;
+    }
+
+    public String getDescripcionP() {
+        return descripcionP;
+    }
+
+    public void setDescripcionP(String descripcionP) {
+        this.descripcionP = descripcionP;
+    }
+
+    public String getImgP() {
+        return imgP;
+    }
+
+    public void setImgP(String imgP) {
+        this.imgP = imgP;
     }
 
 }

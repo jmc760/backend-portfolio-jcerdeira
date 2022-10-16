@@ -21,10 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/explab")
-/*Local*/
-/*@CrossOrigin(origins = "http://localhost:4200")*/
-/*Producción*/
-@CrossOrigin(origins = "https://portfolio-jcerdeira.web.app")
+@CrossOrigin(origins = {"https://portfolio-jcerdeira.web.app", "http://localhost:4200"})
 
 public class CExperiencia {
 
@@ -87,7 +84,7 @@ public class CExperiencia {
 
         Experiencia experiencia = sExperiencia.getOne(id).get();
         experiencia.setNombreE(dtoexp.getNombreE());
-        experiencia.setDescripcionE((dtoexp.getDescripcionE()));
+        experiencia.setDescripcionE(dtoexp.getDescripcionE());
 
         sExperiencia.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia actualizada."), HttpStatus.OK);
