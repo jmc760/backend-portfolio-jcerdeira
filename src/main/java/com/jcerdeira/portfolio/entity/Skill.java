@@ -13,14 +13,16 @@ public class Skill {
     private int id;
     private String nombreS;
     private int porcentajeS;
+    private String imgS;
 
     //Constructores
     public Skill() {
     }
 
-    public Skill(String nombreS, int porcentajeS) {
+    public Skill(String nombreS, int porcentajeS, String imgS) {
         this.nombreS = nombreS;
         this.porcentajeS = porcentajeS;
+        this.imgS = imgS;
     }
 
     //Getters & Setters
@@ -46,6 +48,14 @@ public class Skill {
 
     public void setPorcentajeS(int porcentajeS) {
         this.porcentajeS = porcentajeS;
+    }
+
+    public String getImgS() {
+        return imgS;
+    }
+
+    public void setImgS(String imgS) {
+        this.imgS = imgS;
     }
 
 }

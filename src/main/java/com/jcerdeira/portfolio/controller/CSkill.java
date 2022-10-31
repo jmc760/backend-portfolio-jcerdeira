@@ -60,7 +60,7 @@ public class CSkill {
             return new ResponseEntity(new Mensaje("Esa skill ya existe."), HttpStatus.BAD_REQUEST);
         }
 
-        Skill skill = new Skill(dtoskill.getNombreS(), dtoskill.getPorcentajeS());
+        Skill skill = new Skill(dtoskill.getNombreS(), dtoskill.getPorcentajeS(), dtoskill.getImgS());
         sSkill.save(skill);
 
         return new ResponseEntity(new Mensaje("Skill agregada."), HttpStatus.OK);
@@ -85,6 +85,7 @@ public class CSkill {
         Skill skill = sSkill.getOne(id).get();
         skill.setNombreS(dtoskill.getNombreS());
         skill.setPorcentajeS(dtoskill.getPorcentajeS());
+        skill.setImgS(dtoskill.getImgS());
 
         sSkill.save(skill);
         return new ResponseEntity(new Mensaje("Skill actualizada."), HttpStatus.OK);

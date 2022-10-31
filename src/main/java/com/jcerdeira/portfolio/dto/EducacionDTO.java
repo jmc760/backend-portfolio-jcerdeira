@@ -8,15 +8,20 @@ public class EducacionDTO {
     private String nombreE;
     @NotBlank
     private String descripcionE;
+    @NotBlank
+    private String imgE;
 
+    //Constructores
     public EducacionDTO() {
     }
 
-    public EducacionDTO(String nombreE, String descripcionE) {
+    public EducacionDTO(String nombreE, String descripcionE, String imgE) {
         this.nombreE = nombreE;
         this.descripcionE = descripcionE;
+        this.imgE = imgE;
     }
 
+    //Getters & Setters
     public String getNombreE() {
         return nombreE;
     }
@@ -31,6 +36,14 @@ public class EducacionDTO {
 
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
+    }
+
+    public String getImgE() {
+        return imgE;
+    }
+
+    public void setImgE(String imgE) {
+        this.imgE = imgE;
     }
 
 }

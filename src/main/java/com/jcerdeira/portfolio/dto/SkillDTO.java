@@ -8,13 +8,16 @@ public class SkillDTO {
     private String nombreS;
     @NotBlank
     private int porcentajeS;
+    @NotBlank
+    private String imgS;
 
     public SkillDTO() {
     }
 
-    public SkillDTO(String nombreS, int porcentajeS) {
+    public SkillDTO(String nombreS, int porcentajeS, String imgS) {
         this.nombreS = nombreS;
         this.porcentajeS = porcentajeS;
+        this.imgS = imgS;
     }
 
     public String getNombreS() {
@@ -31,6 +34,14 @@ public class SkillDTO {
 
     public void setPorcentajeS(int porcentajeS) {
         this.porcentajeS = porcentajeS;
+    }
+
+    public String getImgS() {
+        return imgS;
+    }
+
+    public void setImgS(String imgS) {
+        this.imgS = imgS;
     }
 
 }
